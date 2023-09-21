@@ -630,7 +630,9 @@ ALTER TABLE `v2_server_v2ray`
 ALTER TABLE `v2_server_vmess`
     CHANGE `network` `network` varchar(11) COLLATE 'utf8mb4_general_ci' NOT NULL AFTER `rate`;
     CHANGE `networkSettings` `network_settings` TEXT,
-    CHANGE `tlsSettings` `tls_settings` TEXT,
+    CHANGE `tlsSettings` `tls_settings` TEXT;
+    
+ALTER TABLE `v2_server_vmess`
     DROP `ruleSettings`,
     DROP `dnsSettings`;
 
